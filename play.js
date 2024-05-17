@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const allRoutes = require('./routes/allroutes');
 const app = express();
 
-mongoose.connect('mongodb://127.0.0.1:27017/Hi')
+mongoose.connect('mongodb+srv://kunisettyramdheeraj061204:xX4rXj86kwhhP4pg@cluster0.ktcunuv.mongodb.net/')
 .then(() => {
   console.log('Connected to MongoDB');
 })
