@@ -33,7 +33,7 @@ app.set('view engine', 'ejs');
 
 app.use('/', allRoutes);
 
-addUser('Bhargavim', 'ffsd1@gmail.com', '1', 2);
+
 
 
 app.listen(PORT, () => {
