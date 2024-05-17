@@ -14,7 +14,7 @@ mongoose.connect('mongodb+srv://kunisettyramdheeraj061204:<password>@cluster0.kt
 }).catch(err => {
   console.error('Error connecting to MongoDB', err);
 });
-xX4rXj86kwhhP4pgmongodb+srv://kunisettyramdheeraj061204:<password>@cluster0.ktcunuv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+
 const {addUser}=require('./controllers/addUser');
 const {addsearch}=require('./controllers/insertsearch');
 app.use(express.static('public'));
