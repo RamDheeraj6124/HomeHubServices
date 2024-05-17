@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>Admin Logs</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  
+    <div class="container">
+        <h2><%= name %></h2>
+        <table>
+            <tr>
+                <th>Action</th>
+                <th>Timestamp</th>
+                <th>Done By User Name</th>
+                <th>Done By User Role</th>
+                <th>Done By User Email</th>
+                <th>Performed On User</th>
+                <th>Performed on User initial Role</th>
+                <th>Performed On User New Role</th>
+            </tr>
+            <% adlogs.forEach(function(log) { %>
+                <tr>
+                    <td><%= log.action %></td>
+                    <td><%= log.timestamp %></td>
+                    <td><%= log.doneby_user_name %></td>
+                    <td><%= log.doneby_user_role %></td>
+                    <td><%= log.doneby_user_email %></td>
+                    <td><%= log.performedonuser %></td>
+                    <td><%= log.performedonuser_initialrole %></td>
+                    <td><%= log.performedonuser_newrole %></td>
+                </tr>
+            <% }); %>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+.mainContainer{
+    margin:0px;
+    padding:0px;
+}
+.body{
+    margin:0;
+    padding:0;
+}
+.terms{
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    padding:25px;
+    padding-bottom: 20px;
+    margin-top:10px;
+    margin-bottom: 10px;
+    background-color: rgb(249, 245, 245);
+}
+
+.termsAndConditions{
+    margin-left:7%;
+    margin-right: 7%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    background-color: rgb(249, 245, 245);
+    padding :30px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.termsAndConditions h5{
+    font-weight: bold;
+    font-size: 16px;
+}

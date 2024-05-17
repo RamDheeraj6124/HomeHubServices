@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert and Redirect</title>
+</head>
+<body>
+    <script>
+
+        alert("email already exist,cant add");
+
+        setTimeout(function() {
+            window.location.href = '/renderadmin?username=${encodeURIComponent(username)}&role=${encodeURIComponent(role)}&email=${encodeURIComponent(email)}' 
+        }, 100); 
+    </script>
+</body>
+</html>

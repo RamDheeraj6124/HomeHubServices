@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/project css.css">
+  <link rel="stylesheet" href="/css/project1.css">
+</head>
+
+<body>
+  <nav class="sidebar overlay" id="myNav">
+    <a href="#" class="logo">Home Hub Services</a>
+    <a href="#" class="closebtn" onclick="closeNav()" style="margin-top: 20px;margin-right: -6px;">x</a>
+    <div class="menu-content" style="overflow:none">
+        <ul class="menu-items">
+            <br><br>
+            <li class="item">
+                <a href="#">Home</a>
+            </li>
+            <li class="item">
+                <div class="submenu-item">
+                    <span>Our Services</span>
+                    <i class="fa-solid fa-chevron-right" style="margin-right: 40px;"></i>
+                </div> 
+                <ul class="menu-items submenu"> 
+                    <div class="menu-title">
+                        <i class="fa-solid fa-chevron-left"></i>
+                        Services
+                    </div>
+                    <div style="overflow-y: scroll;">
+                    <li class="item">
+                        <a href="../carpentershop">Carpenter</a>
+                    </li>
+                    <li class="item">
+                        <a href="../mobile">Mobile Repair</a>
+                    </li>
+                    <li class="item">
+                        <a href="../painting">Painting</a>
+                    </li>
+                    <li class="item">
+                        <a href="../homenurse">Home Nurse</a>
+                    </li>
+                    <li class="item">
+                        <a href="../interior-design">Interior Design</a>
+                    </li>
+                    <li class="item">
+                        <a href="../housekeeping">Maid</a>
+                    </li>
+                    <li class="item">
+                        <a href="../babysitter">Baby Sitter</a>
+                    </li>
+                    <li class="item">
+                        <a href="../furniture">Furniture</a>
+                    </li>
+                    <li class="item">
+                        <a href="../catering">Cattering</a>
+                    </li>
+                    <li class="item">
+                        <a href="../flooring-repair">Flooring</a>
+                    </li>
+                    <li class="item">
+                        <a href="../cleaning">Home Cleaning</a>
+                    </li>
+                    <li class="item">
+                        <a href="../plumbing">Plumbing</a>
+                    </li>
+                    <li class="item">
+                        <a href="../electrian">Electrician</a>
+                    </li>
+                    <li class="item">
+                        <a href="../spaandsalon">Spa and Saloon</a>
+                    </li>
+                    <li class="item">
+                        <a href="../appliancess">Kitchen Appliances Repair</a>
+                    </li>
+                    </div>
+                </ul>
+            </li>
+            <li class="item">
+                <div class="submenu-item">
+                    <span>User Reviews</span>
+                    <i class="fa-solid fa-chevron-right" style="margin-right: 40px;"></i>
+                </div>
+                <ul class="menu-items submenu">
+                    <div class="menu-title" style="margin-right: 40px;">
+                        <i class="fa-solid fa-chevron-left"></i>
+                        Your submenu title
+                    </div>
+                    <li class="item">
+                        <a href="#">First sublink</a>
+                    </li>
+                    <li class="item">
+                        <a href="#">First sublink</a>
+                    </li>
+                    <li class="item">
+                        <a href="#">First sublink</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="item">
+                <a href="../termsandconditions">Terms and Conditions</a>
+            </li>
+            <li class="item">
+                <a href="../aboutus">About Us</a>
+            </li>
+            <li class="item">
+                <a href="#">Privacy Policy</a>
+            </li>
+            <li class="item">
+                <a href="../contact">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="mainbar">
+  <div class="icon" style="margin-left:15px ; margin-top:5px;">
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+  </div>
+
+  <div class="location">
+  <h6 id="lodet"><i class="bi bi-geo-alt-fill"></i>Update location</h6>
+  <script>
+    const query = window.location.search;
+    const url = new URLSearchParams(query);
+    const name = url.get('username');
+    const locationDiv = document.getElementById("lodet");
+
+    const checkError = (error) => {
+      switch (error.code) {
+        case error.PERMISSION_DENIED:
+          locationDiv.innerText = "Please allow access to location";
+          break;
+        case error.POSITION_UNAVAILABLE:
+          // Usually fired for Firefox
+          locationDiv.innerText = "Location Information unavailable";
+          break;
+        case error.TIMEOUT:
+          locationDiv.innerText = "The request to get user location timed out";
+          break;
+        default:
+          locationDiv.innerText = "An unknown error occurred";
+      }
+    };
+
+    const showLocation = async (position) => {
+      try {
+        // We use the Nominatim API for getting actual address from latitude and longitude
+        let response = await fetch(
+          `https://nominatim.openstreetmap.org/reverse?lat=${position.coords.latitude}&lon=${position.coords.longitude}&format=json`
+        );
+        // Store response object
+        let data = await response.json();
+        locationDiv.innerText = `${data.address.city}, ${data.address.country}`;
+      } catch (error) {
+        console.error('Error fetching location:', error);
+        locationDiv.innerText = "Error fetching location";
+      }
+    };
+
+    if (name) {
+      if (navigator.geolocation) {
+        // Returns position (latitude and longitude) or error
+        navigator.geolocation.getCurrentPosition(showLocation, checkError);
+      } else {
+        // For old browsers i.e IE
+        locationDiv.innerText = "Can't get location";
+      }
+    } 
+  </script>
+</div>
+
+  <div class="searchBar">
+    <div class="searchIcon">
+    <i class="bi bi-search"></i>
+    <input id="search-input" type="text" placeholder="Search...">
+    <ul id="search-results"></ul>
+    </div>
+  </div>
+  <script src="/js/script3.js"></script>
+  <div class="offers">
+    <div class="offerIcon">
+      <button style="background: none; border:0;"><i class='bx bxs-offer'></i>Offers</button>
+    </div>
+  </div>
+  <div class="Orders">
+    <div class="OrderIcon">
+      <button style="background: none; border:0;">Return & Orders</button>
+    </div>
+  </div>
+  <div class="cart">
+    <div class="cartIcon">
+      <button style="background: none; border:0;"><i class="bi bi-cart"></i>Cart</button>
+    </div>
+  </div>
+  <button class="btn" id="loginButton" style="display: block;"><a href="/login" style="color:black;">Login/Register</a></button>
+<button class="btn1" id="userButton" style="border-radius: 80%;width: 50px;font-size: 22px; background-color: rgb(59, 165, 165); color :white;transform:translateX(40%); display: none;"><div id="username"></div></button>
+<div id="Options" style="display: none;">
+  <p id="u1" style="display: none;"></p>
+  <p id="u2" style="display: none;"></p>
+  <p id="u3" style="display: none;"></p>
+   <button onclick="logout()">Logout</button>
+</div>
+<script>
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const username = urlParams.get('username');
+  const email = urlParams.get('email');
+  const role = urlParams.get('role');
+  const usernameElement = document.getElementById('username');
+  const userButton = document.getElementById('userButton');
+  const loginButton = document.getElementById('loginButton');
+  const Options = document.getElementById('Options');
+  const u1 = document.getElementById('u1');
+  const u2 = document.getElementById('u2');
+  const u3 = document.getElementById('u3');
+
+  function logout() {
+      const email = urlParams.get('email'); // Retrieve email from URL
+      const encodedEmail = encodeURIComponent(email); // Encode email for URL
+      window.location.href = `/logout?email=${encodedEmail}`;
+  }
+
+  if (username) {
+      usernameElement.textContent = username[0];
+      userButton.style.display = 'block';
+      loginButton.style.display = 'none';
+      u1.textContent = "User Name: " + username;
+      u1.style.display = 'block';
+      u2.textContent = "Email: " + email;
+      u2.style.display = 'block';
+      if (role == 4) {
+          u3.textContent = "Role: Admin";
+          u3.style.display = 'block';
+      } else if (role == 3) {
+          u3.textContent = "Role: Sub Admin";
+          u3.style.display = 'block';
+      } else if (role == 2) {
+          u3.textContent = "Role: Editor";
+          u3.style.display = 'block';
+      } else if (role == 1) {
+          u3.textContent = "Role: Shop";
+          u3.style.display = 'block';
+      }
+  } else {
+      userButton.style.display = 'none';
+      loginButton.style.display = 'block';
+  }
+
+  userButton.addEventListener('click', function () {
+      if (Options.style.display === 'block') {
+          Options.style.display = 'none';
+      } else {
+          Options.style.display = 'block';
+      }
+  });
+</script>
+
+</div>
+<%- include('./partials/header.ejs') %>
+  <div class="Services">
+    <h1 style="font-size: 20px; margin-left: 40px;margin-top: 10px;"> Services we are offering </h1>
+    <div class="firstLine">
+      <div class="firstService">
+        <a href="../interiordesign"><img src="/images/Interior Design-logos_black.png" style="height:180px; width:170px;"></a>
+      </div>
+      <div class="secondService">
+        <a href="../furniture"><img src="/images/Furniture-logos_black.png" style="height:180px; width:170px;"></a>
+      </div>
+      <div class="thirdService">
+        <a href="../spaandsalon"><img src="/images/Spa and Saloon-logos_black.png" style="height:180px;"></a>
+      </div>
+      <div class="fourthService">
+        <a href="../homenurse"><img src="/images/Home Nurse-logos_black.png" style="height:180px;"></a>
+      </div>
+      <div class="fifthService">
+        <a href="../catering"><img src="/images/Catering Services-logos_black.png" style="height:180px;"></a>
+      </div>
+    </div>
+    <div class="secondLine">
+        <div class="sixthService">
+            <a href="../cleaning"><img src="/images/Kitchen Cleaning-logos_black.png" style="height:180px; width:170;"></a>
+        </div>
+      <div class="seventhService">
+        <a href="../babysitter"><img src="/images/baby sitter-logos_black.png" style="height:180px; width:170;"></a>
+      </div>
+      <div class="eighthService">
+        <a href="../carpentershop"><img src="/images/Carpenter-logos_black.png" style="height:180px; width:170;"></a>
+      </div>
+      <div class="ninthService">
+        <a href="../electrian"><img src="/images/Electrician-logos_black.png" style="height:180px; width:170;"></a>
+      </div>
+      <div class="tenthService">
+        <a href="../appliancess"><img src="/images/Kitchen Appliances Repair-logos_black.png" style="height:180px; width:170;"></a>
+      </div>
+    </div>
+    <div class="thirdLine">
+      <div class="eleventhService">
+        <a href="../housekeeping"><img src="/images/Maid-logos_black.png" style="height:180px; width:170;"></a>
+      </div>
+      <div class="twelvethService">
+        <a href="../plumbing"><img src="/images/Plumbing-logos_black.png" style="height:180px; width:170;"></a>
+      </div>
+      <div class="thirteenthService">
+        <a href="../painting"><img src="/images/Painting-logos_transparent.png" style="height:180px; width:170;"></a>
+      </div>
+      <div class="fourteenthService">
+        <a href="../mobile"><img src="/images/Mobile Repair-logos_black.png" style="height:180px; width:170;"></a>
+      </div>
+      <div class="fifteenthService">
+        <a href="../flooringrepair"><img src="/images/Flooring-logos_black.png" style="height:180px; width:170;"></a>
+      </div>
+    </div>
+  </div>
+  <div class="container6">
+    <div class="container7">
+      <h1 style="font-size: 25px;margin-bottom: 15px;"> Popular Choices </h1>
+      <div class="slider-wrapper">
+        <button id="prev-slide" class="slide-button material-symbols-rounded">
+          chevron_left
+        </button>
+        <div class="image-list">
+            <div class="image-item">
+                <img src="/images/haircut.jpg">
+                <div class="caption">
+                    <h4>Haircut</h4>
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="/images/maid.jpg">
+                <div class="caption">
+                    <h4>Baby Sitter</h4>
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="/images/tv repair.jpg">
+                <div class="caption">
+                    <h4>Tv repair</h4>
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="/images/sofa cleaning.jpg">
+                <div class="caption">
+                    <h4>Sofa cleaning</h4>
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="/images/Toilet-and-bathroom-cleaning-services-in-pune-and-pimpri-chinchwad-731x488.jpg">
+                <div class="caption">
+                    <h4>Bathroom-cleaning</h4>
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="/images/post-workout-2.jpg">
+                <div class="caption">
+                    <h4>Post-workout</h4>
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="/images/home cleaniing.png">
+                <div class="caption">
+                    <h4>Home cleaning</h4>
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="/images/Painting-5.jpg">
+                <div class="caption">
+                    <h4>Painting</h4>
+                </div>
+            </div>
+        </div>
+        <button id="next-slide" class="slide-button material-symbols-rounded">
+          chevron_right
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="container6">
+    <div class="container7">
+      <h1 style="font-size: 25px;margin-bottom: 15px;"> Saloon for women </h1>
+      <div class="slider-wrapper">
+        <div class="image-list">
+            <div class="image-item">
+                <div class="image-hover2">
+                <img src="/images/waxing.jpg">
+                </div>
+                <div class="caption">
+                    <h4>Waxing</h4>
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="/images/pedicure.jpg">
+                <div class="caption">
+                    <h4>Pedicure</h4>
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="/images/facial.jpg">
+                <div class="caption">
+                    <h4>Facial & Cleanup</h4>
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="/images/hair clean.jpeg">
+                <div class="caption">
+                    <h4>Hair clean</h4>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="container6">
+      <div class="container7">
+        <h1 style="font-size: 25px;margin-bottom: 15px;"> Spa for women </h1>
+        <div class="slider-wrapper">
+          <div class="image-list">
+              <div class="image-item">
+                  <div class="image-hover2">
+                  <img src="/images/stress relief.jpeg">
+                  </div>
+                  <div class="caption">
+                      <h4>Stress relief</h4>
+                  </div>
+              </div>
+              <div class="image-item">
+                  <img src="/images/pain relief2.jpg">
+                  <div class="caption">
+                      <h4>Pain relief</h4>
+                  </div>
+              </div>
+              <div class="image-item">
+                  <img src="/images/post-workout-3.jpg">
+                  <div class="caption">
+                      <h4>Post-workout</h4>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="Pest-contro1">
+        <div class="pest">
+          <h3>Pest control</h3>
+          <h3 style="margin-top: 82px; font-size: 20px;">Creating Pest-Free Havens for Your Home:</h3>
+          <h3 style=" font-size: 20px; margin-top: -10px;"> Your Sanctuary, Our Priority!</h3>
+          <button class="pest-button" style="margin-top: 50px;">Explore</button>
+          <div class="pest-img">
+              <img src="/images/pest-control.jpg">
+          </div>
+        </div>
+  </div>
+  <div>
+    <i class='bx bxs-to-top' onclick="topFunction()" id="myBtn" title="Go to top"></i>
+  </div>
+  
+ 
+    
+  <div class="container6">
+    <div class="container7">
+      <h1 style="font-size: 25px;margin-bottom: 15px;"> Interior Design </h1>
+      <div class="slider-wrapper">
+        <div class="image-list">
+            <div class="image-item">
+                <div class="image-hover2">
+                <img src="/images/Bed-repairing.jpg">
+                </div>
+                <div class="caption">
+                    <h4>Bed Repair</h4>
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="/images/partition-repair.jpg">
+                <div class="caption">
+                    <h4>Partition Repair</h4>
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="/images/kitchen-Services.jpg">
+                <div class="caption">
+                    <h4>Kitchen Services</h4>
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="/images/tv board.jpg">
+                <div class="caption">
+                    <h4>Tv Board Repair</h4>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="Pest-contro1">
+      <div class="pest">
+        <h3>Plumbing</h3>
+        <h3 style="margin-top: 90px; font-size: 20px;">Clean Homes, Happy Hearts – Our Guarantee</h3>
+          <button class="pest-button" style="margin-top: 55px;"><a href="../plumbing" style="text-decoration: none;color:white">Explore</a></button>
+        <div class="pest-img">
+            <img src="/images/plumbing.jpg">
+        </div>
+      </div>
+    </div>
+    <div class="custom-container">
+      <div class="custom-wrapper">
+          <h1 style="font-size: 25px;margin-bottom: 15px;"> Electrician </h1>
+          <div class="custom-slider">
+              <button id="custom-prev-slide" class="custom-slide-button material-symbols-rounded">chevron_left</button>
+              <div class="custom-image-list">
+                  <div class="custom-image-item">
+                      <img src="/images/switch board.jpeg">
+                      <div class="custom-caption">
+                          <h4>Switch Board</h4>
+                      </div>
+                  </div>
+                  <div class="custom-image-item">
+                      <img src="/images/gyser.jpg">
+                      <div class="custom-caption">
+                          <h4>Gyser Repair</h4>
+                      </div>
+                  </div>
+                  <div class="custom-image-item">
+                      <img src="/images/invertor.jpg">
+                      <div class="custom-caption">
+                          <h4>Invertor Repair</h4>
+                      </div>
+                  </div>
+                  <div class="custom-image-item">
+                      <img src="/images/light.jpg">
+                      <div class="custom-caption">
+                          <h4>Light Repair</h4>
+                      </div>
+                  </div>
+                  
+                  <div class="custom-image-item">
+                      <img src="/images/tv repair.jpg">
+                      <div class="custom-caption">
+                          <h4>Tv Repair</h4>
+                      </div>
+                  </div>    
+              </div>
+              <button id="custom-next-slide" class="custom-slide-button material-symbols-rounded">chevron_right</button>
+          </div>
+      </div>
+  </div>
+
+  <h2>Our Workflow</h2>
+  <div class = "booking_steps">
+    <div class="step1">
+      <img src="/images/step 1-logos_black.png" >
+      <h4>Schedule Your Service</h4>
+      <p> select, book service & relax</p>
+    </div>
+    <div class="step2">
+      <img src="/images/step 2-logos_black.png">
+      <h4>Provider Arrival Notification</h4>
+      <p>It helps you prepare for their arrival</p>
+    </div>
+    <div class="step3">
+      <img src="/images/step 3-logos_black.png">
+      <h4>Service At Your Home</h4>
+      <p>keep calm, we will serve at your home</p>
+    </div>
+    <div class="step4">
+      <img src="/images/step 4-logos_black.png">
+      <h4>Payment</h4>
+      <p>It can be done while booking service or after job done</p>
+    </div>
+  </div>
+  <%- include('./partials/footer.ejs') %>
+  <script>
+
+const sidebar = document.querySelector(".sidebar");
+    const menu = document.querySelector(".menu-content");
+    const menuItems = document.querySelectorAll(".submenu-item");
+    const subMenuTitles = document.querySelectorAll(".submenu .menu-title");
+
+    sidebar.addEventListener("click", () => sidebar.classList.toggle("closed"));
+    menuItems.forEach((item, index) => {
+        item.addEventListener("click", () => {
+            menu.classList.add("submenu-active");
+            item.classList.add("show-submenu");
+            menuItems.forEach((item2, index2) => {
+                if (index != index2) {
+                    item2.classList.remove("show-submenu");
+                }
+            });
+        });
+    });
+
+    subMenuTitles.forEach((title) => {
+        title.addEventListener("click", () => {
+            menu.classList.remove("submenu-active");
+        });
+    });
+
+    function openNav() {
+      document.getElementById("myNav").style.width = "20%";
+    }
+  
+    function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+    }
+  
+    let mybutton = document.getElementById("myBtn");
+  
+  window.onscroll = function() {
+      scrollFunction()
+  };
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+  
+  const initSlider = () => {
+      const imageList = document.querySelector(".slider-wrapper .image-list");
+      const slideButtons = document.querySelectorAll(".slider-wrapper .slide-button");
+      const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
+      
+  
+      // Slide images according to the slide button clicks
+      slideButtons.forEach(button => {
+          button.addEventListener("click", () => {
+              const direction = button.id === "prev-slide" ? -1 : 1;
+              const scrollAmount = imageList.clientWidth * direction;
+              imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
+          });
+      });
+  
+       // Show or hide slide buttons based on scroll position
+       const handleSlideButtons = () => {
+          slideButtons[0].style.display = imageList.scrollLeft <= 0 ? "none" : "flex";
+          slideButtons[1].style.display = imageList.scrollLeft >= maxScrollLeft ? "none" : "flex";
+      }
+      
+  
+      // Call these functions when image list scrolls
+      imageList.addEventListener("scroll", () => {
+          handleSlideButtons();
+      });
+  }
+  window.addEventListener("resize", initSlider);
+  window.addEventListener("load", initSlider);
+
+  const initializeCustomSlider = () => {
+            const imageListElement = document.querySelector(".custom-slider .custom-image-list");
+            const slideButtons = document.querySelectorAll(".custom-slider .custom-slide-button");
+
+            // Slide images according to the slide button clicks
+            slideButtons.forEach(button => {
+                button.addEventListener("click", () => {
+                    const direction = button.id === "custom-prev-slide" ? -1 : 1;
+                    const scrollAmount = imageListElement.clientWidth * direction;
+                    imageListElement.scrollBy({ left: scrollAmount, behavior: "smooth" });
+                });
+            });
+
+            // Show or hide slide buttons based on scroll position
+            const handleCustomSlideButtons = () => {
+                const maxScrollLeftValue = imageListElement.scrollWidth - imageListElement.clientWidth;
+                slideButtons[0].style.display = imageListElement.scrollLeft <= 0 ? "none" : "flex";
+                slideButtons[1].style.display = imageListElement.scrollLeft >= maxScrollLeftValue ? "none" : "flex";
+            };
+
+            // Call these functions when image list scrolls
+            imageListElement.addEventListener("scroll", () => {
+                handleCustomSlideButtons();
+            });
+
+            // Initialize slide buttons initially
+            handleCustomSlideButtons();
+        };
+
+        window.addEventListener("resize", initializeCustomSlider);
+        window.addEventListener("load", initializeCustomSlider);
+  </script>
+</body>
+</html>

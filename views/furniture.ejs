@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+         body {
+      font-family: Arial, sans-serif;
+      padding: 0;
+      margin: 0;
+      background-color: #f7f7f7;
+    }
+
+    .container1 {
+      margin-left: 5%;
+      margin-right: 5%;
+      display: flex;
+      flex-direction: column;
+      max-width: 1200px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
+    }
+    .container1{
+        margin-top: 10px;
+  margin-bottom: 10px;
+    }
+
+    .container .navbar1 {
+  display: flex;
+  background-color: rgb(249, 245, 245);
+  padding: 10px;
+  
+  position: relative;
+  height: 50px;
+  flex-wrap: wrap; /* Allow the navbar items to wrap to the next line */
+}
+
+.container .navbar1 a {
+  color: rgb(96, 107, 107);
+  text-decoration: none;
+  padding: 6px;
+  margin-left: -5px;
+  margin-top: 10px;
+  position: relative;
+  width: 115px;
+  box-sizing: border-box; /* Include padding and border in the width calculation */
+}
+
+.container .navbar1 a:hover {
+  color: black;
+}
+
+.container .navbar1 .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.container .navbar1 .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 460px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  width: 100%;
+  left: 0;
+  top: 100%;
+}
+
+.container .navbar1 .dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.container .navbar1 .dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.container .navbar1 .dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.container .navbar1 .dropdown-content a {
+  width: 110%; /* Each dropdown item takes up the full width */
+  box-sizing: border-box; /* Include padding and border in the width calculation */
+}
+.container2{
+    display:flex;
+}
+.disc {
+      display: flex;
+      border: none;
+      padding: 20px;
+      background-color: aliceblue;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .disc ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    .disc ul h4 {
+      font-size: 17px;
+    }
+
+    .disc ul li {
+      list-style-type: none;
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+
+    .disc ul li a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .disc ul li a:hover {
+      color: black;
+      text-decoration: underline;
+    }
+
+    .social-links {
+      display: flex;
+    }
+
+    .social-links i {
+      font-size: 22px;
+      padding: 8px;
+      border: 2px solid;
+      border-radius: 30px;
+      margin: 12px;
+      margin-left: 20px;
+    }
+
+    .disc .social-links i:hover {
+      background-color: black;
+      font-size: 24px;
+      color:white;
+      transition: 0.3s;
+    }
+
+
+    .qualities-container{
+      background-color: rgb(249, 245, 245);
+      border-radius: 8px;
+      padding: 20px;
+      margin-left:20px;
+      margin-top:20px;
+      
+    }
+    .qualities-container h2 {
+      margin: 0 0 20px 0;
+      font-size: 24px;
+      color: #333;
+    }
+    .quality {
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+    }
+
+    .quality-icon {
+      color: black;
+      margin-right: 10px;
+    }
+
+    .quality-text {
+      color: #333;
+    }
+    
+    .second-container {
+      background-color: rgb(249, 245, 245);
+      border-radius: 8px;
+      padding: 10px;
+      margin-top: 20px;
+    }
+
+    .second-container h2 {
+      margin: 0 0 20px 0;
+      font-size: 24px;
+      color: #333;
+    }
+    .service-providers{
+        margin-left: 11%;
+
+    }
+   
+
+    .provider-card {
+      width: 100%;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      margin-bottom: 20px;
+    }
+
+    .provider-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .provider-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .provider-info {
+      padding: 15px;
+    }
+
+    .provider-info h2 {
+      margin: 0 0 5px 0;
+      font-size: 24px;
+      color: #333;
+    }
+
+    .provider-info p {
+      margin: 0;
+      color: #666;
+    }
+
+    .provider-info .click-btn {
+      margin-top: 10px;
+      background-color: rgb(243, 234, 223);
+      color: black;
+      border: none;
+      border-radius: 4px;
+      padding: 8px 16px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .provider-info .click-btn:hover {
+      background-color: rgb(243, 234, 223);
+    }
+    .main h1{
+        padding-left: 20px;
+    }
+    .qualities-container{
+        position: sticky; 
+        top: 30px; 
+        padding: 10px; 
+    }
+    .second-container{
+        position: sticky;
+        top:280px;
+    }
+    .click-btn a{
+      text-decoration: none;
+      color:black;
+    }
+
+   
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <%- include('./partials/header.ejs') %>
+    </div>
+    
+    <div class="container1">
+    <div class="container2">
+    <div class="main">
+        <!-- Qualities container -->
+        <h1>Furniture Service</h1>
+        <div class="qualities-container">
+          <h2>Why Choose Our Furniture Service?</h2>
+          <div class="quality">
+            <i class="fas fa-check-circle quality-icon"></i>
+            <span class="quality-text">Professional and Experienced Carpenters</span>
+          </div>
+          <div class="quality">
+            <i class="fas fa-check-circle quality-icon"></i>
+            <span class="quality-text">Prompt Response and Reliable Service</span>
+          </div>
+          <div class="quality">
+            <i class="fas fa-check-circle quality-icon"></i>
+            <span class="quality-text">Competitive Pricing with No Hidden Charges</span>
+          </div>
+          <div class="quality">
+            <i class="fas fa-check-circle quality-icon"></i>
+            <span class="quality-text">24/7 Assistance</span>
+          </div>
+          <div class="quality">
+            <i class="fas fa-check-circle quality-icon"></i>
+            <span class="quality-text">Guaranteed Satisfaction</span>
+          </div>
+        </div>
+        <div class="second-container">
+            <h2>Additional Information</h2>
+
+          </div>
+    </div>
+
+    <div class="service-providers">
+        <h1>Furniture Repair Service Providers</h1>
+        <!-- Provider cards -->
+        <div class="provider-card">
+          <img src="images/furniture_repair1.jpg" alt="Provider 1">
+          <div class="provider-info">
+            <h2>Comfort Cove Furniture</h2>
+            <p>Location: Chennai</p>
+            <p>click: 8945697865</p>
+            <button class="click-btn"><a href="../furniturecart">explore</a></button>
+          </div>
+        </div>
+        <div class="provider-card">
+          <img src="images/furniture_repair2.jpg" alt="Provider 2">
+          <div class="provider-info">
+            <h2>Furniture Fix Masters</h2>
+            <p>Location: Chennai</p>
+            <p>click: 987-654-3210</p>
+            <button class="click-btn"><a href="../furniturecart">explore</a></button>
+          </div>
+        </div>
+        <div class="provider-card">
+          <img src="images/furniture_repair3.jpg" alt="Provider 3">
+          <div class="provider-info">
+            <h2>Provider 3</h2>
+            <p>Location: Chennai</p>
+            <p>click: 456-789-0123</p>
+            <button class="click-btn"><a href="../furniturecart">explore</a></button>
+          </div>
+        </div>
+        <div class="provider-card">
+          <img src="images/furniture_repair4.jpg" alt="Provider 4">
+          <div class="provider-info">
+            <h2>Provider 4</h2>
+            <p>Location: Chennai</p>
+            <p>click: 789-012-3456</p>
+            <button class="click-btn"><a href="../furniturecart">explore</a></button>
+          </div>
+        </div>
+        <div class="provider-card">
+          <img src="images/furniture_repair5.jpg" alt="Provider 5">
+          <div class="provider-info">
+            <h2>Provider 5</h2>
+            <p>Location: City E</p>
+            <p>click: 210-987-6543</p>
+            <button class="click-btn"><a href="../furniturecart">explore</a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>

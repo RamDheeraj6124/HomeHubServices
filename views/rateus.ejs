@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color:rgb(177, 174, 174);
+      }
+      
+      .rating-container {
+        text-align: center;
+      }
+      
+      .stars {
+        font-size: 40px;
+      }
+      
+      .star {
+        color: #ddd;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+      }
+      
+      .star:hover,
+      .star.active {
+        color: #ffcc00;
+      }
+      
+    </style>
+</head>
+<body>
+
+<div class="rating-container">
+    <h1>Rate this Website:</h1>
+    <div class="stars" data-rating="0">
+        <button class="star" data-value="1">&#9733;</button>
+        <button class="star" data-value="2">&#9733;</button>
+        <button class="star" data-value="3">&#9733;</button>
+        <button class="star" data-value="4">&#9733;</button>
+        <button class="star" data-value="5">&#9733;</button>
+    </div>
+    <button class="rate-me">Rate Me</button>
+    <% if (avg !== undefined && num !== undefined) { %>
+        <p>Rating: <%= avg.toFixed(2) %> out of <%= num %> reviews</p>
+    <% } %>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const stars = document.querySelectorAll(".star");
+        const rateMeButton = document.querySelector(".rate-me");
+
+        stars.forEach(function(star) {
+            star.addEventListener("click", function() {
+                const ratingValue = parseInt(star.dataset.value);
+
+                // Highlight selected stars
+                stars.forEach(function(s, index) {
+                    if (index < ratingValue) {
+                        s.classList.add("active");
+                    } else {
+                        s.classList.remove("active");
+                    }
+                });
+
+                // Update data-rating attribute on stars
+                document.querySelectorAll('.star').forEach(function(s, index) {
+                    if (index < ratingValue) {
+                        s.setAttribute('data-rating', 'active');
+                    } else {
+                        s.removeAttribute('data-rating');
+                    }
+                });
+            });
+        });
+
+        rateMeButton.addEventListener("click", function() {
+            const ratingValue = document.querySelectorAll('.star.active').length; // Get active stars
+            if (ratingValue === 0) {
+                alert("Please select a rating before submitting.");
+            } else {
+                // Send rating to server
+                saveRating(ratingValue);
+            }
+        });
+
+        // Function to send rating to server
+        async function saveRating(rating) {
+            try {
+                const response = await fetch("/api/save-rating", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ value: rating })
+                });
+
+                if (!response.ok) {
+                    throw new Error("Failed to save rating");
+                }
+
+                const data = await response.json();
+                alert(data.message); // Show server response message
+                window.location.href='/thankyou';
+            } catch (error) {
+                console.error("Error:", error);
+                alert("An error occurred while saving the rating");
+            }
+        }
+    });
+</script>
+
+</body>
+</html>

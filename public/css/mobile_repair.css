@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    font-size: 18px;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.heading {
+    padding: 20px;
+    margin-left: -1080px;
+}
+.header{
+    height: 80px;
+    width: 90%;
+    background-color: rgb(243, 234, 223);
+    border-radius: 3px;
+    margin: 30px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+.header .logo{
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+}
+.cart{
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 10px;
+    border-radius: 3px;
+    width: 80px;
+}
+.fa-solid{
+    color: black;
+}
+.cart p{
+    height: 22px;
+    width: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 22px;
+    background-color: rgb(243, 234, 223);
+    color: black;
+}
+#cartItem img {
+    height:120px;
+    width:120px;
+}
+.searchBar {
+    padding-left: 50px;
+  }
+
+  .searchIcon {
+    background: #fff;
+    margin-left: 270px;
+    border-radius: 3px;
+    display: flex;
+    width: 400px;
+    align-items: center;
+    max-height: 35px;
+    transition: max-height 0.5s;
+    overflow: hidden;
+    border-radius: 20px;
+    height: 40px;
+  }
+
+  .searchIcon input {
+    width: 200%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 12px 10px;
+  }
+
+  .searchIcon input::placeholder {
+    color: black;
+  }
+
+  .searchIcon i {
+    font-size: 18px;
+    color: none;
+    margin-left: 15px;
+  }
+
+  .searchIcon:hover {
+    border: 1px solid black;
+  }
+
+.container{
+    display: flex;
+    width: 70%;
+    margin-bottom: 30px;
+    margin-right: 260px;
+}
+#root{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.sidebar {
+    position: fixed;
+    width: 25%;
+    max-height: 80vh;
+    overflow-y: auto;
+    border-radius: 5px;
+    background-color: #fff;
+    right: 50px;
+    padding: 15px;
+    text-align: center;
+    top: 120px; 
+}
+.head{
+    background-color: rgb(243, 234, 223);
+    border-radius: 3px;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: black;
+    display: flex;
+    align-items: center;
+
+}
+.foot{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+    padding: 10px 0px;
+    border-top: 1px solid #333;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgb(243, 234, 223);
+    border-radius: 5px;
+    padding: 15px;
+    cursor: pointer;
+}
+.box:hover {
+    transform: scale(1.04);
+    transition: 0.8s;
+    border: 1px solid rgb(249, 227, 201);
+}
+.img-box{
+    width: 200px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.images{
+    width: 90%;
+    height: 75%;
+    object-fit: cover;
+    object-position: center;
+}
+.bottom{
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 110px;
+}
+h2{
+    font-size: 20px;
+    color: black;
+}
+button{
+    width: 100%;
+    position: relative;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(243, 234, 223);
+    padding: 7px 25px;
+    cursor: pointer;
+    color: black;
+}
+button:hover{
+    background-color: rgb(247, 224, 201);
+}
+.cart-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: white;
+    border-bottom: 1px solid #aaa;
+    border-radius: 3px;
+    margin: 10px 10px;
+}
+.row-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: 1px solid rgb(243, 234, 223);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rowimg{
+    max-width: 43px;
+    max-height: 43px;
+    border-radius: 50%;
+}
+.fa-trash:hover{
+    cursor: pointer;
+    color: #333;
+}

@@ -1,0 +1,32 @@
+.booking_steps .step1,.step2,.step3,.step4{
+    height:37vh;
+    width:20vw;
+    padding:30px;
+    text-align: center;
+    border: 1px solid grey;
+    background-color: rgb(237, 249, 253);
+    transition:0.5s;
+}
+
+.booking_steps{
+    display :flex;
+    margin-left:110px;
+    margin-top:30px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.booking_steps img{
+    margin-top: -10px;
+    height:17vh;
+    width:8vw;
+}
+.booking_steps .step1:hover,.step2:hover,.step3:hover,.step4:hover{
+    transform: scale(1.1);
+    box-shadow: 3px 3px 10px black;
+}
+
+h2{
+    text-align: center;
+    text-shadow: 2px 2px 8px rgb(104, 101, 101);
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/css/cart2.css">
+        <script src="https://kit.fontawesome.com/92d70a2fd8.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    </head>
+    <body>
+        <div class="header">
+            <p class="logo">Home Hub Services</p>
+            <div class="searchBar">
+                <div class="searchIcon">
+                  <i class="bi bi-search"></i>
+                  <input type="search" placeholder="Search" name="name" class="searchField" autocomplete="off">
+                </div>
+            </div>
+            <div class="cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <p id="count">0</p>
+            </div>
+        </div>
+        <div class="heading">
+            <h1 style="font-size: 25px;">Electricians</h1>
+        </div>
+        <div class="container">
+            <div id="root"></div>
+            <div class="sidebar">
+                <div class="head"><p>My Cart</p></div>
+                <div id="cartItem"><img src='emptycart_2.png' alt='Empty Cart'><p style="font-size: 15px;">Your cart is empty</p></div>
+                <div class="foot">
+                    <h3>Total</h3>
+                    <h2 id="total">$ 0.00</h2>
+                </div>
+            </div>
+        </div>
+        <script src="/js/cart2.js"></script>
+    </body>
+</html>

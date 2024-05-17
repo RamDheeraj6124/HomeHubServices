@@ -1,0 +1,103 @@
+.mainAboutUs{
+    margin:0px;
+    padding:0px;
+}
+.body{
+    margin:0;
+    padding:0;
+}
+.aboutUs{
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    padding:25px;
+    padding-bottom: 20px;
+    margin-top:10px;
+    margin-bottom: 10px;
+    background-color: rgb(249, 245, 245);
+}
+
+.welcome #first ,#third ,#fourth{
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.welcome {
+    font-family:Arial, Helvetica, sans-serif;
+    padding:20px;
+    margin-top:30px;
+    margin-bottom: 30px;
+    margin-left: 6%;
+    margin-right: 6%;
+    background-color: rgb(249, 245, 245);
+    font-size:18px;
+}
+
+.welcome p{
+      line-height:35px;
+}
+
+.howItWorks{
+    display: flex;
+}
+
+.howItWorks .section1,.section2,.section3{
+    background-color: white;
+    padding:7px 20px 20px 20px;
+    text-align: center;
+    margin:5px;
+    width:fit-content;
+    height: fit-content;
+    box-shadow: 0px 0px 3px 1px rgb(84, 82, 82);
+}
+
+.welcome h4{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.why{
+    display: flex;
+}
+.why .b1,.b2,.b3,.b4{
+    background-color: white;
+    padding:7px 20px 20px 20px;
+    text-align: center;
+    margin:5px;
+    box-shadow: 0px 0px 3px 1px rgb(84, 82, 82);
+}
+.disc {
+    display: flex;
+    border: none;
+    padding: 20px;
+    background-color: aliceblue;
+  }
+
+  .disc ul h4{
+    font-size: 17px;
+  }
+
+  .disc ul li {
+    list-style-type: none;
+    font-size: 15px;
+    margin-bottom: 4px;
+    margin-right: 120px;
+  }
+
+  .disc ul li a {
+    text-decoration: none;
+  }
+
+  .disc ul li a:link {
+    color:black;
+  }
+
+  .disc ul li a:hover {
+    color: black;
+    text-decoration: black;
+  }
+
+  .disc ul li a:active {
+    color: blue;
+  }
+
+
+

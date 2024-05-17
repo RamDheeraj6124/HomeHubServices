@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Admin Dashboard</h2>
+        <a href="/goback">go back</a>
+        <form action="/createuser?ausername=<%- encodeURIComponent(username) %>&arole=<%- encodeURIComponent(role) %>&aemail=<%- encodeURIComponent(email) %>" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <label for="role">Role:</label>
+            <select id="role" name="role">
+                                <option value="3">Sub Admin</option>
+                                <option value="2">Editor</option>
+                                <option value="1">Shop</option>
+                                <option value="0">User</option>
+            </select>
+            <button type="submit">Create User</button>
+        </form>
+        <% Object.keys(usersByRole).forEach(function(role) { %>
+            <h3><%= role %> Management</h3>
+            <table>
+                <tr>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Action</th>
+                </tr>
+                <% usersByRole[role].forEach(function(user) { %>
+                    <tr>
+                        <td><%= user.username %></td>
+                        <td><%= user.email %></td>
+                        <td><%= role %></td> <!-- Added role column -->
+                        <td>
+                            <form action="/deleteuser?ausername=<%- encodeURIComponent(username) %>&arole=<%- encodeURIComponent(role) %>&aemail=<%- encodeURIComponent(email) %>" method="post">
+                                <input type="hidden" name="userId" value="<%= user._id %>">
+                                <input type="hidden" name="email" value="<%= user.email %>">
+                                <input type="hidden" name="prole" value="<%= user.role %>">
+                                <button type="submit">Delete</button>
+                            </form>
+                            <form action="/updateuser?ausername=<%- encodeURIComponent(username) %>&arole=<%- encodeURIComponent(role) %>&aemail=<%- encodeURIComponent(email) %>" method="post">
+                                <input type="hidden" name="userId" value="<%= user._id %>">
+                                <input type="hidden" name="email" value="<%= user.email %>">
+                                <input type="hidden" name="prole" value="<%= user.role %>">
+                                <select name="role">
+                                    <% if(role !== '3') { %>
+                                        <option value="3">Sub Admin</option>
+                                    <% } %>
+                                    <% if(role !== '2') { %>
+                                        <option value="2">Editor</option>
+                                    <% } %>
+                                    <% if(role !== '1') { %>
+                                        <option value="1">Shop</option>
+                                    <% } %>
+                                    <% if(role !== '0') { %>
+                                        <option value="0">User</option>
+                                    <% } %>
+                                </select>
+                                <button type="submit">Update Role</button>
+                            </form>
+                        </td>
+                    </tr>
+                <% }); %>
+            </table>
+        <% }); %>
+    </div>
+</body>
+</html>

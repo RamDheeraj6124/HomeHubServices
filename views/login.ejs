@@ -1,0 +1,201 @@
+<!-- views/login.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<style>
+       *{
+    margin: 0%;
+    padding: -9% ;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.container {
+    width:100%;
+    height:100vh;
+    background-position: center;
+    background-size: cover;
+    position:relative;
+    background-color: white;
+}
+.wrapper {
+    width:100%;
+    max-width:470px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    height:550px;
+    transform:translate(-50%,-50%);
+    background:#fff;
+    padding:50px 60px 70px;
+    text-align:center; 
+    border:2px solid rgb(217, 111, 23);  
+}
+.wrapper h1{
+    font-size:30px;
+    margin-bottom:40px;
+    color:rgb(217, 111, 23);
+    position:relative;
+}
+.input-box {
+    background: #eaeaea;
+    margin:15px 0;
+    border-radius:3px;
+    display:flex;
+    align-items: center;
+    max-height:65px;
+    transition:max-height 0.5s;
+    overflow :hidden;
+}
+input{
+    width:100%;
+    background:transparent;
+    border:0;
+    outline:0;
+    padding:18px 15px;
+}
+.input-box input::placeholder {
+    color:black;
+}
+.input-box i { 
+    font-size:20px;
+    transform: translateX(-50%);
+    color:#999;
+}
+form p{
+    text-align: left;
+    font-size:13px;
+}
+form p a{
+    text-decoration: none;
+    color:#3c00a0;
+}
+.btn-field{
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+}
+.btn-field button{
+    flex-basis:48%;
+    background:white;
+    color:#fff;
+    height:40px;
+    border-radius: 20px;
+    border:2px solid black;
+    outline:0;
+    cursor:pointer;
+    transition: background 1s;
+}
+.icons {
+    display:flex;
+    width:30px;
+    margin:0 12px;
+    cursor:pointer;
+    font-size: 25px;
+    margin-top:20px;
+    margin-left: 100px;
+}
+.wrapper .btn {
+    width: 100%;
+    height:45px;
+    background: rgb(217, 111, 23);
+    border:0px;
+    outline:none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    color:black;
+    font-weight: 600;
+    transition:0.6s;
+}
+
+.wrapper .btn:hover{
+    font-size:large;
+}
+
+.input-group{
+    height:280px;
+}
+
+.btn-field button.disable {
+    background:#eaeaea;
+    color:#555;
+}
+.wrapper .remember {
+    display:flex; 
+    justify-content: space-between;
+    margin:-15px 0px 15px;
+    font-size: 15px; 
+    margin-top:15px;
+}
+
+.remember label input {
+    accent-color:white;
+    margin-right: 5px;
+}
+
+.remember a {
+    color:black;
+    text-decoration: none;
+}
+
+.remember a:hover {
+
+    text-decoration: underline;
+}
+
+.wrapper .registration {
+    text-align:center;
+    margin:20px 0 15px;
+}
+
+.registration button {
+    color:rgb(217, 111, 23);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.registration button:hover {
+    text-decoration: underline;
+}
+</style>
+<body>
+    <div class ="container" id="Logins">
+        <div class="wrapper" id="Login">
+            <h1 id="title"> Login </h1>
+            <div class="icons" id="icons1" style="height:30px;">
+                <i class='bx bxl-google' style="margin-right: 30px;"></i>
+                <i class='bx bxl-facebook'  style="margin-right: 30px;"></i>
+                <i class='bx bxl-twitter' ></i>
+            </div>
+            <form action="/login" method="POST" id="Login">
+            <div class="input-group">
+                <div class="input-box">
+                    <input type="email" name="email" placeholder="Email" required>
+                    <i class='bx bxs-envelope'></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" name="password" placeholder="password" required>
+                    <i class='bx bxs-lock-alt'></i>
+                </div> 
+                <div class = "remember">
+                    <label><input type="checkbox" style="width:30px;">Remember me </label> 
+                    <a href="/forgotpassword"> forgot password?</a> 
+                </div>
+                <br>
+                <button type="submit" class = "btn" id="pass3">Login Now</button> 
+                </div>
+            </form>
+            <div class = "registration" style="margin-left: 60px;display: flex;transform: translateY(-260%);">
+                <p id="pass4"> Don't have an account?</p>
+                <button style="border: 0;background: transparent;" onclick="myfunction2()"><a href="signup" style="color:rgb(217, 111, 23);text-decoration: none;font-weight: 600;font-size: 15px;">Register Now</a></button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

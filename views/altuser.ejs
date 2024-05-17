@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="/css/altstyle.css">
+</head>
+<body>
+    <div>
+        <% if (role == 4) { %>
+            <h1>Welcome Admin</h1>
+            <ul>
+                <h2>Options:</h2>
+                <li><a href="/dashboard?username=<%- encodeURIComponent(username) %>&role=<%- encodeURIComponent(role) %>&email=<%- encodeURIComponent(email) %>">View Website</a></li>
+                <li><a href="/renderadmin?username=<%- encodeURIComponent(username) %>&role=<%- encodeURIComponent(role) %>&email=<%- encodeURIComponent(email) %>">Edit Users</a></li>
+                <li><a href="/renderadminlog?email=<%- encodeURIComponent(email) %>&role=<%- encodeURIComponent(role) %>">Check activity on database</a></li>
+            </ul>
+        <% } else if (role == 3) { %>
+            <h1>Welcome Sub Admin</h1>
+            <ul>
+                <h2>Options:</h2>
+                <li><a href="/dashboard?username=<%- encodeURIComponent(username) %>&role=<%- encodeURIComponent(role) %>&email=<%- encodeURIComponent(email) %>">View Website</a></li>
+                <li><a href="/rendersubadmin?username=<%- encodeURIComponent(username) %>&role=<%- encodeURIComponent(role) %>&email=<%- encodeURIComponent(email) %>">Edit Users</a></li>
+                <li><a href="/rendersubadminlog?email=<%- encodeURIComponent(email) %>&role=<%- encodeURIComponent(role) %>">Check activity on database</a></li>
+            </ul>
+        <% } else if (role == 2) { %>
+            <h1>Welcome Editor</h1>
+            <ul>
+                <h2>Options:</h2>
+                <li><a href="/dashboard?username=<%- encodeURIComponent(username) %>&role=<%- encodeURIComponent(role) %>&email=<%- encodeURIComponent(email) %>">View Website</a></li>
+                <li><a href="/rendereditor?username=<%- encodeURIComponent(username) %>&role=<%- encodeURIComponent(role) %>&email=<%- encodeURIComponent(email) %>">Edit Users</a></li>
+                <li><a href="/rendereditorlog?email=<%- encodeURIComponent(email) %>&role=<%- encodeURIComponent(role) %>">Check activity on database</a></li>
+            </ul>
+        <% } else { %>
+            <h1>Welcome Shops</h1>
+            <ul>
+                <h2>Options:</h2>
+                <li><a href="/dashboard?username=<%- encodeURIComponent(username) %>&role=<%- encodeURIComponent(role) %>&email=<%- encodeURIComponent(email) %>">View Website</a></li>
+            </ul>
+        <% } %>
+    </div>
+</body>
+</html>

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/92d70a2fd8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <title>House Cleaning Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'poppins', sans-serif;
+            font-size: 18px;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .heading {
+            padding: 20px;
+            margin-left: -1080px;
+        }
+
+        .box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid rgb(243, 234, 223);
+            border-radius: 5px;
+            padding: 40px;
+            cursor: pointer;
+            width: 90%;
+        }
+
+        .header {
+            height: 80px;
+            width: 97%;
+            background-color: rgb(243, 234, 223);
+            border-radius: 3px;
+            margin: 30px 0px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+        }
+
+        .header .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: black;
+        }
+
+        .cart {
+            display: flex;
+            background-color: white;
+            justify-content: space-between;
+            align-items: center;
+            padding: 7px 10px;
+            border-radius: 3px;
+            width: 80px;
+        }
+
+        .fa-solid {
+            color: black;
+        }
+
+        .cart p {
+            height: 22px;
+            width: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 22px;
+            background-color: rgb(243, 234, 223);
+            color: black;
+        }
+
+        .searchBar {
+            padding-left: 50px;
+        }
+
+        .searchIcon {
+            background: #fff;
+            margin-left: 270px;
+            border-radius: 3px;
+            display: flex;
+            width: 400px;
+            align-items: center;
+            max-height: 35px;
+            transition: max-height 0.5s;
+            overflow: hidden;
+            border-radius: 20px;
+            height: 40px;
+        }
+
+        .searchIcon input {
+            width: 200%;
+            background: transparent;
+            border: 0;
+            outline: 0;
+            padding: 12px 10px;
+        }
+
+        .searchIcon input::placeholder {
+            color: black;
+        }
+        .box input::placeholder {
+            color: black;
+            font-size: 15px;
+        }
+
+        .searchIcon i {
+            font-size: 18px;
+            color: none;
+            margin-left: 10px;
+        }
+
+        .searchIcon:hover {
+            border: 1px solid black;
+        }
+
+        .container {
+            display: flex;
+            width: 60%;
+            margin-bottom: 30px;
+            margin-right: 260px;
+            padding: 20px; /* Added padding */
+        }
+
+        #root {
+            width: 60%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 2px;
+            
+        }
+
+        .sidebar {
+            position: fixed;
+            width: 25%;
+            max-height: 80vh;
+            overflow-y: auto;
+            border-radius: 5px;
+            background-color: #fff;
+            right: 20px;
+            padding: 10px;
+            text-align: center;
+            top: 120px;
+        }
+
+        .head {
+            background-color: rgb(243, 234, 223);
+            border-radius: 3px;
+            height: 40px;
+            padding: 10px;
+            margin-bottom: 20px;
+            color: black;
+            display: flex;
+            align-items: center;
+        }
+
+        .foot {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0px;
+            padding: 10px 0px;
+            border-top: 1px solid #333;
+        }
+
+        #cart-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: white;
+            border-bottom: 1px solid #aaa;
+            border-radius: 3px;
+            margin: 10px 10px;
+        }
+
+        button {
+            width: 100%;
+            position: relative;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(243, 234, 223);
+            padding: 7px 25px;
+            cursor: pointer;
+            color: black;
+        }
+
+        button:hover {
+            background-color: rgb(247, 224, 201);
+        }
+
+        .img-box{
+            width: 200px;
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .images{
+            width: 90%;
+            height: 75%;
+            object-fit: cover;
+            object-position: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <p class="logo">Home Hub Services</p>
+        <div class="searchBar">
+            <div class="searchIcon">
+                <i class="bi bi-search"></i>
+                <input type="search" placeholder="Search" name="name" class="searchField" autocomplete="off">
+            </div>
+        </div>
+        <div class="cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <p id="count">0</p>
+        </div>
+    </div>
+    
+    <div class="heading">
+        <h1 style="font-size: 25px;margin-left: 35px;">Floor Repairing</h1>
+    </div>
+
+    <section>
+        <div style="margin-left: -290px;">
+        <div id="root">
+            <div class="box" id="service1">
+                <h3 style="padding: 10px;margin-top: -10px;">Hardwood Floor</h3>
+                <div class='img-box'>
+                    <img class='images' src="/images/hardwood.jpeg"></img>
+                </div>
+                <span style="padding: 10px;">Rs. 150 per sq ft</span>
+                <label for="basicSqFt" style="padding: 10px;">Square Footage:</label>
+                <input type="number" id="basicSqFt" placeholder="Enter sq ft" oninput="calculateCost('basicSqFt', 150, 'basicCost')">
+                <span id="basicCost" style="padding: 10px;">Cost: Rs. 0</span>
+                <button style="padding: 10px;"onclick="addToCart('Hardwood Floor', 150, 'basicSqFt')">Add to Cart</button>
+            </div>
+        
+            <div class="box" id="service2">
+                <h3 style="padding: 12px;margin-top: -10px;">Laminate Floor</h3>
+                <div class='img-box'>
+                    <img class='images' src="/images/laminate floor.jpg"></img>
+                </div>
+                <span style="padding: 12px;">Rs. 100 per sq ft</span>
+                <label for="kitchenSqFt" style="padding: 10px;">Square Footage:</label>
+                <input type="number" id="kitchenSqFt" placeholder="Enter sq ft" oninput="calculateCost('kitchenSqFt', 100, 'kitchenCost')">
+                <span id="kitchenCost" style="padding: 10px;">Cost: Rs. 0</span>
+                <button style="padding: 10px;" onclick="addToCart('Laminate Floor', 100, 'kitchenSqFt')">Add to Cart</button>
+            </div>
+        
+            <div class="box" id="service3">
+                <h3 style="padding: 10px;margin-top: -10px;">Tile Floor</h3>
+                <div class='img-box'>
+                    <img class='images' src="/images/tile repair.jpeg"></img>
+                </div>
+                <span style="padding: 10px;">Rs. 250 per sq ft</span>
+                <label for="carpetSqFt" style="padding: 10px;">Square Footage:</label>
+                <input type="number" id="carpetSqFt" placeholder="Enter sq ft" oninput="calculateCost('carpetSqFt', 250, 'carpetCost')">
+                <span id="carpetCost" style="padding: 10px;">Cost: Rs. 0</span>
+                <button style="padding: 10px;"onclick="addToCart('Tile Floor', 250, 'carpetSqFt')">Add to Cart</button>
+            </div>
+        
+            <div class="box" id="service4">
+                <h3 style="padding: 10px;margin-top: -10px;">Carpet Floor</h3>
+                <div class='img-box'>
+                    <img class='images' src="/images/carpet.jpeg"></img>
+                </div>
+                <span style="padding: 10px;"> Rs. 80 per sq ft</span>
+                <label for="windowCount" style="padding: 10px;">Square Footage:</label>
+                <input type="number" id="windowCount" placeholder="Enter count" oninput="calculateCost('windowCount', 80, 'windowCost')">
+                <span id="windowCost" style="padding: 10px;">Cost: Rs. 0</span>
+                <button style="padding: 10px;" onclick="addToCart('Carpet Floor', 80, 'windowCount')">Add to Cart</button>
+            </div>
+        
+            <div class="box" id="service5">
+                <h3 style="padding: 10px;margin-top: -10px;">Staircase Repair</h3>
+                <div class='img-box'>
+                    <img class='images' src="/images/stair case.jpeg"></img>
+                </div>
+                <span style="padding: 10px;"> Rs. 150 per sq ft</span>
+                <label style="padding: 10px;" for="seatCount">Square Footage:</label>
+                <input type="number" id="seatCount" placeholder="Enter count" oninput="calculateCost('seatCount', 150, 'upholsteryCost')">
+                <span id="upholsteryCost" style="padding: 10px;">Cost: Rs. 0</span>
+                <button style="padding: 10px;" onclick="addToCart('Staircase Repair', 150, 'seatCount')">Add to Cart</button>
+            </div>
+        
+            <div class="box" id="service6">
+                <h3 style="padding: 10px;margin-top: -10px;">Floor Leveling</h3>
+                <div class='img-box'>
+                    <img class='images' src="/images/floor leveling.jpeg"></img>
+                </div>
+                <span style="padding: 10px;">Rs. 180 per sq ft</span>
+                <label for="moveInOut">Square Footage:</label>
+                <input type="number" id="moveInOut" placeholder="Enter count" oninput="calculateCost('moveInOut', 180, 'moveInOutCost')">
+                <span id="moveInOutCost">Cost: Rs. 0</span>
+                <button onclick="addToCart('Floor Leveling', 180, 'moveInOut')">Add to Cart</button>
+            </div>
+        
+            <div class="box" id="service7">
+                <h3 style="padding: 10px;margin-top: -10px;">Vinly Flooring</h3>
+                <div class='img-box'>
+                    <img class='images' src="/images/vinyl-flooring.jpg"></img>
+                </div>
+                <span style="padding: 10px;">Rs. 120 per sq ft</span>
+                <label for="postConstruction" style="padding: 10px;">Square Footage:</label>
+                <input type="number" id="postConstruction" placeholder="Enter count" oninput="calculateCost('postConstruction', 120, 'postConstructionCost')">
+                <span id="postConstructionCost" style="padding: 10px;">Cost: Rs. 0</span>
+                <button style="padding: 10px;" onclick="addToCart('Vinly Flooring', 120, 'postConstruction')">Add to Cart</button>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- Add more services as needed -->
+    <div class="container">
+        <div class="sidebar">
+            <div class="head">
+                <p>My Cart</p>
+            </div>
+            <div id="cartItem"><img src='/images/emptycart_2.png' style="height:120px;" alt='Empty Cart'><p
+                    style="font-size: 15px;">Your cart is empty</p></div>
+            <div class="foot">
+                <h3>Total</h3>
+                <h2 id="total">₹ 0.00</h2>
+            </div>
+        </div>
+    </div>
+    <script>
+    let cart = [];
+
+    // Function to load cart data from localStorage on page load
+    window.onload = function() {
+        const savedCart = localStorage.getItem('cart');
+        if (savedCart) {
+            cart = JSON.parse(savedCart);
+            updateCart();
+        }
+    };
+
+    function calculateCost(inputId, rate, displayId) {
+        const sqFt = document.getElementById(inputId).value;
+        const cost = (sqFt * rate).toFixed(2);
+        document.getElementById(displayId).textContent = `Cost: Rs. ${cost}`;
+    }
+
+    function addToCart(serviceName, rate, inputId) {
+        const sqFt = document.getElementById(inputId).value;
+        const cost = (sqFt * rate).toFixed(2);
+        cart.push({
+            name: serviceName,
+            cost: cost
+        });
+        updateCart();
+    }
+
+    function removeFromCart(index) {
+        cart.splice(index, 1);
+        updateCart();
+    }
+
+    function updateCart() {
+        const cartItems = document.getElementById('cartItem');
+        const totalAmount = document.getElementById('total');
+
+        cartItems.innerHTML = '';
+        let total = 0;
+
+        document.getElementById('count').innerHTML = cart.length;
+
+        if (cart.length == 0) {
+            document.getElementById('cartItem').innerHTML =
+                "<img src='/images/emptycart_2.png' style='height:120px;' alt='Empty Cart'><p>Your cart is empty</p>";
+            document.getElementById('total').innerHTML = '₹ ' + 0 + '.00';
+        } 
+
+        cart.forEach((item, index) => {
+            const cartItem = document.createElement('div');
+            cartItem.className = 'cart-item';
+            cartItem.innerHTML = `
+                <span>${item.name}: Rs. ${item.cost}</span>
+                <i class='fa-solid fa-trash' style="cursor: pointer;font-size:15px;margin-left:5px;" onclick="removeFromCart(${index})"></i>
+            `;
+            cartItems.appendChild(cartItem);
+            total += parseFloat(item.cost);
+        });
+
+        totalAmount.textContent = `Rs. ${total.toFixed(2)}`;
+
+        // Save cart data to localStorage
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
+
+    </script>
+</body>
+
+</html>
