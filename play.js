@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const allRoutes = require('./routes/allroutes');
 const app = express();
-mongoose.connect('mongodb+srv://kunisettyramdheeraj061204:xX4rXj86kwhhP4pg@cluster0.ktcunuv.mongodb.net//mywebsite', {
+mongoose.connect('mongodb+srv://kunisettyramdheeraj061204:xX4rXj86kwhhP4pg@cluster0.ktcunuv.mongodb.net/', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   serverSelectionTimeoutMS: 30000, // 30 seconds
