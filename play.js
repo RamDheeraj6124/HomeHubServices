@@ -4,13 +4,15 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const allRoutes = require('./routes/allroutes');
 const app = express();
-
-mongoose.connect('mongodb+srv://kunisettyramdheeraj061204:xX4rXj86kwhhP4pg@cluster0.ktcunuv.mongodb.net/')
-.then(() => {
+mongoose.connect('mongodb+srv://kunisettyramdheeraj061204:xX4rXj86kwhhP4pg@cluster0.ktcunuv.mongodb.net/mywebsite', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  serverSelectionTimeoutMS: 30000, // 30 seconds
+  socketTimeoutMS: 45000 // 45 seconds
+}).then(() => {
   console.log('Connected to MongoDB');
-})
-.catch((error) => {
-  console.error('Error connecting to MongoDB:', error);
+}).catch(err => {
+  console.error('Error connecting to MongoDB', err);
 });
 
 const {addUser}=require('./controllers/addUser');
