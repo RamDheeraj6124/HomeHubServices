@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const allRoutes = require('./routes/allroutes');
 const app = express();
-mongoose.connect('mongodb+srv://kunisettyramdheeraj061204:xX4rXj86kwhhP4pg@cluster0.ktcunuv.mongodb.net/mywebsite', {
+mongoose.connect('mongodb+srv://kunisettyramdheeraj061204:<password>@cluster0.ktcunuv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/mywebsite', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   serverSelectionTimeoutMS: 30000, // 30 seconds
@@ -14,7 +14,7 @@ mongoose.connect('mongodb+srv://kunisettyramdheeraj061204:xX4rXj86kwhhP4pg@clust
 }).catch(err => {
   console.error('Error connecting to MongoDB', err);
 });
-
+xX4rXj86kwhhP4pgmongodb+srv://kunisettyramdheeraj061204:<password>@cluster0.ktcunuv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
 const {addUser}=require('./controllers/addUser');
 const {addsearch}=require('./controllers/insertsearch');
 app.use(express.static('public'));
