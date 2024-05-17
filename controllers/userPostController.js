@@ -1,6 +1,6 @@
 // controllers/userPostController.js
 const path = require('path');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const User = require('../models/userModel');
 const Log = require('../models/Log');
 const mongoose=require('mongoose');
