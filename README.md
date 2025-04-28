@@ -6,7 +6,7 @@ To run website use command
 2) npm install --to install node modules
 3) node play.js -to start server     
 
-#Contributions
+# Contributions
 K.Chandrasekhar
 K.Ram Dheeraj
 K.Bhargav Reddy
