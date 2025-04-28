@@ -6,10 +6,14 @@ To run website use command
 2) npm install --to install node modules
 3) node play.js -to start server     
 
-# Contributions
+## 👨‍💻 Contributors
 
-K.Chandrasekhar
-K.Ram Dheeraj
-K.Bhargav Reddy
-M.Navdeep
-M.Sai Rohith
+**Group ID:** 38  
+**Project Members:**
+- K. Chandrasekhar
+- K. Ram Dheeraj 
+- K.Bhargav Reddy
+- M. Sai Rohith 
+- Navdeep
+
+---
